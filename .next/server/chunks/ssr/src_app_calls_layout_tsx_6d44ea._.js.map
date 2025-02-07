@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/user/Desktop/Nextgram/next-chat/src/app/calls/layout.tsx"],"sourcesContent":["import { FC, ReactNode } from 'react';\r\n\r\nconst Layout: FC<{ children: ReactNode }> = ({ children }) => {\r\n  return (\r\n    <>\r\n      <div className='hidden md:flex md:ml-24 px-2 md:px-0 h-dvh'>\r\n        {children}\r\n      </div>\r\n      <div className='md:hidden my-20 md:px-2'>{children}</div>\r\n    </>\r\n  );\r\n};\r\n\r\nexport default Layout;"],"names":[],"mappings":";;;;;AAEA,MAAM,SAAsC,CAAC,EAAE,QAAQ,EAAE;IACvD,qBACE;;0BACE,8OAAC;gBAAI,WAAU;0BACZ;;;;;;0BAEH,8OAAC;gBAAI,WAAU;0BAA2B;;;;;;;;AAGhD;uCAEe"}},
-    {"offset": {"line": 35, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}
