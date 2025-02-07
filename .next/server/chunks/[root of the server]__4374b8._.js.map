@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 103, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/user/Desktop/Nextgram/next-chat/src/lib/pusher.ts"],"sourcesContent":["import Pusher from 'pusher';\r\n\r\nconst pusher = new Pusher({\r\n  appId: process.env.PUSHER_APP_ID!,\r\n  key: process.env.PUSHER_KEY!,\r\n  secret: process.env.PUSHER_SECRET!,\r\n  cluster: process.env.PUSHER_CLUSTER!,\r\n  useTLS: true,\r\n});\r\n\r\nexport default pusher;"],"names":[],"mappings":";;;AAAA;;AAEA,MAAM,SAAS,IAAI,yIAAA,CAAA,UAAM,CAAC;IACxB,OAAO,QAAQ,GAAG,CAAC,aAAa;IAChC,KAAK,QAAQ,GAAG,CAAC,UAAU;IAC3B,QAAQ,QAAQ,GAAG,CAAC,aAAa;IACjC,SAAS,QAAQ,GAAG,CAAC,cAAc;IACnC,QAAQ;AACV;uCAEe"}},
+    {"offset": {"line": 116, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 130, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/user/Desktop/Nextgram/next-chat/src/app/api/type-indicator/route.ts"],"sourcesContent":["/* eslint-disable @typescript-eslint/no-unused-vars */\r\nimport pusher from '@/lib/pusher';\r\nimport { NextResponse } from 'next/server';\r\n\r\nexport const POST = async (req: Request, res: Response) => {\r\n  const { channel, event, data } = await req.json();\r\n\r\n  try {\r\n    await pusher.trigger(channel, event, data);\r\n  } catch (error) {\r\n    console.error('Error sending pusher event', error);\r\n  }\r\n\r\n  return NextResponse.json({ success: true }, { status: 200 });\r\n};"],"names":[],"mappings":"AAAA,oDAAoD;;;AACpD;AACA;;;AAEO,MAAM,OAAO,OAAO,KAAc;IACvC,MAAM,EAAE,OAAO,EAAE,KAAK,EAAE,IAAI,EAAE,GAAG,MAAM,IAAI,IAAI;IAE/C,IAAI;QACF,MAAM,sHAAA,CAAA,UAAM,CAAC,OAAO,CAAC,SAAS,OAAO;IACvC,EAAE,OAAO,OAAO;QACd,QAAQ,KAAK,CAAC,8BAA8B;IAC9C;IAEA,OAAO,gIAAA,CAAA,eAAY,CAAC,IAAI,CAAC;QAAE,SAAS;IAAK,GAAG;QAAE,QAAQ;IAAI;AAC5D"}},
+    {"offset": {"line": 150, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
